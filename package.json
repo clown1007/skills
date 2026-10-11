@@ -1,0 +1,16 @@
+{
+  "name": "pi-local-decider",
+  "version": "0.1.0",
+  "description": "Local System One decisions for pi using an OpenAI-compatible decider model",
+  "type": "module",
+  "license": "MIT",
+  "keywords": ["pi-package", "pi", "local-model", "system-one"],
+  "engines": { "node": ">=20.6.0" },
+  "files": ["extensions", "lib", "bin", "skills", "README.md", "LICENSE"],
+  "bin": { "local-decider": "./bin/local-decider.mjs" },
+  "scripts": { "test": "node --test", "decide": "node bin/local-decider.mjs" },
+  "pi": {
+    "extensions": ["./extensions/local-decider.js"],
+    "skills": ["./skills/local-decider"]
+  }
+}
